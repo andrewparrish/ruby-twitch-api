@@ -5,7 +5,7 @@ module Twitch
     ## API method for users
     module Users
       def get_users_follows(options = {})
-        initialize_response UserFollow, get('users/follows', options)
+        initialize_response UserFollow, get('channels/followed', options)
       end
 
       def get_users(options = {})

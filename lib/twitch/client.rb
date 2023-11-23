@@ -170,6 +170,7 @@ module Twitch
 
       return http_response if http_response.success?
 
+      binding.pry
       raise APIError.new(http_response.status, http_response.body)
     end
   end
